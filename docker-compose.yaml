@@ -1,0 +1,15 @@
+services:
+  model-server:
+    build: .
+    container_name: model-server
+    working_dir: /app
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./adapters:/adapters:ro
+      - ./models:/models:ro
+      - ./models.json:/models.json:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+
