@@ -7,7 +7,7 @@ import torch
 app = Flask(__name__)
 
 # Configuration
-MODELS_CONFIG_FILE = 'models.json'
+MODELS_CONFIG_FILE = 'models/models.json'
 ADAPTERS_DIR = 'adapters'
 MODELS_DIR = 'models'
 
