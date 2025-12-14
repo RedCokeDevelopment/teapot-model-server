@@ -6,8 +6,8 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - ./adapters:/adapters:ro
-      - ./models:/models:ro
+      - ./adapters:/app/adapters:ro
+      - ./models:/app/models:ro
     environment:
       - PYTHONUNBUFFERED=1
     restart: unless-stopped
