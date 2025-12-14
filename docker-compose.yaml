@@ -8,8 +8,6 @@ services:
     volumes:
       - ./adapters:/adapters:ro
       - ./models:/models:ro
-      - ./models.json:/models.json:ro
-    environment:
       - PYTHONUNBUFFERED=1
     restart: unless-stopped
 
