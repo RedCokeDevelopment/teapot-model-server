@@ -78,7 +78,10 @@ def init_models():
 def list_models():
     """List available models."""
     return jsonify({
-        name: info['info'].get('description', 'No description') 
+        name: {
+            'description': info['info'].get('description', 'No description'),
+            'optimized_threshold': info['info'].get('Optimized_Threshold', None)
+        }
         for name, info in loaded_models.items()
     })
 
